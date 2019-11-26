@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Country Lab</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/bundle.js"></script>
+  </head>
+  <body>
+
+    <div id="app">
+      <h1>Total Population:{{totalPopulation}} </h1>
+
+      <select v-model="selected">
+        <option v-for="country in countries" v-bind:value="country">{{country.name}}</option>
+      </select>
+
+      <form v-on:submit.prevent="saveFavCountry">
+        <select v-model="favCountry">
+          <option v-for="country in countries" v-bind:value="country">{{country.name}}</option>
+        </select>
+        <input type="submit" value="Add Favourite">
+      </form>
+
+      <ul v-if="selected !== null">
+        <li>{{ selected.name }}</li>
+        <li><img :src="selected.flag"></li>
+        <li>{{selected.population}}</li>
+      </ul>
+
+      <ul v-if="favCountry !== null">
+        <li v-for="country in favCountries">{{country.name}}</li>
+      </ul>
+    </div>
+
+  </body>
+</html>
