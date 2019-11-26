@@ -1,0 +1,25 @@
+{
+  "name": "3_countries_lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/L3n1ad/week7_day2_lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/L3n1ad/week7_day2_lab/issues"
+  },
+  "homepage": "https://github.com/L3n1ad/week7_day2_lab#readme",
+  "dependencies": {
+    "vue": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
