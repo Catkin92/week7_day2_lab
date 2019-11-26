@@ -22,14 +22,22 @@
         <input type="submit" value="Add Favourite">
       </form>
 
+      <h1>Selected country:</h1>
+
       <ul v-if="selected !== null">
-        <li>{{ selected.name }}</li>
-        <li><img :src="selected.flag"></li>
-        <li>{{selected.population}}</li>
+        <li>Name: {{ selected.name }}</li>
+        <li><img :src="selected.flag" width="300px"></li>
+        <li>Population: {{selected.population}}</li>
+        <h3>Neighbouring countries:</h3>
+        <li v-for="country in neighbeuris">
+          {{country.name}}
+        </li>
       </ul>
 
+      <h1>Favourite Countries:</h1>
+
       <ul v-if="favCountry !== null">
-        <li v-for="country in favCountries">{{country.name}}</li>
+        <li v-for="country in favCountries">Name: {{country.name}}</li>
       </ul>
     </div>
 
